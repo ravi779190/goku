@@ -1,0 +1,59 @@
+[
+  {
+    "name": "iPhone12",
+    "price": "123",
+    "featured": true,
+    "company": "apple"
+  },
+  {
+    "name": "iPhone13",
+    "price": "1234",
+    "featured": true,
+    "company": "apple"
+  },
+  {
+    "name": "iPhone14",
+    "price": "12345",
+    "company": "apple"
+  },
+  {
+    "name": "iPhone15",
+    "price": "123456",
+    "company": "apple"
+  },
+  {
+    "name": "iPhone16",
+    "price": "1234567",
+    "company": "apple"
+  },
+  {
+    "name": "iPhone16 Pro",
+    "price": "12345678",
+    "company": "apple"
+  },
+  {
+    "name": "iPhone16 Pro Max",
+    "price": "12345678",
+    "company": "apple"
+  },
+  {
+    "name": "iPhone15 Pro",
+    "price": "12345687",
+    "company": "apple"
+  },
+  {
+    "name": "iPhone15 Pro Max",
+    "price": "12345879",
+    "company": "apple"
+  },
+  {
+    "name": "iPhone14 Pro",
+    "price": "1234765",
+    "company": "apple"
+  },
+  {
+    "name": "iPhone14 Pro Max",
+    "price": "1234567",
+    "company": "apple"
+  }
+]

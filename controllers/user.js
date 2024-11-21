@@ -1,4 +1,3 @@
-const { v4: uuidv4 } = require("uuid");
 const User = require("../models/user"); // import User Modal
 const { setUser } = require("../service/auth");
 
@@ -26,7 +25,7 @@ async function handleUserLogin(req, res) {
   }
 
   const token = setUser(user);
-  res.cookie("uid", token);
+  res.cookie("uid", token); // set jwt token in cookies 
   return res.redirect("/");
 }
 

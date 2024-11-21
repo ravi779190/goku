@@ -5,8 +5,8 @@ const router = express.Router();
 // Render route after login for the logged in users only
 router.get("/", async (req, res) => {
   if (!req.user) {
-    res.status(401);
-    res.json({message:"unauthorized user"});
+    // res.status(401);
+    // res.json({message:"unauthorized user"});
     res.redirect("/login");
     return res;
   } // check for the req.user from auth middleare

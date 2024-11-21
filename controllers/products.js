@@ -53,7 +53,7 @@ const getAllProducts = async (req, res) => {
     let skip = (page - 1) * limit;
 
     apiData = apiData.skip(skip).limit(limit);
-    console.log(queryObj, req.query, page, limit);
+    // console.log(queryObj, req.query, page, limit);
   // }
 
   const data = await apiData;

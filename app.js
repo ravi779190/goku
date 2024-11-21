@@ -18,11 +18,12 @@ const connectDB = require("./db/connect");
 
 const PORT = process.env.PORT || 5001;
 
-// to get the routes
-const staticRoute = require("./routes/staticRouter");
+// to import the routes
+const staticRoute = require("./routes/staticRouter"); // static routes like login, signup, verify, reset password, 2FA etc
 const userRoute = require("./routes/user");
 const productsRoutes = require("./routes/products");
 
+// to set the view engine for  FE in ./views
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
@@ -30,10 +31,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// define routes for api through middleware
-app.use("/", checkAuth, staticRoute);  //check for login user then goes to static routess
-app.use("/user",  userRoute); // public access for user routes like log in
-app.use("/api/products", restrictToLoggedinUserOnly,  productsRoutes); // restricted to loggedin users only
+// restrictToLoggedinUserOnly - use this for for secured routes
+// checkAuth - use this to get user from cookies and will return null if no user logged in
+
+// define routes for api through route middleware @ ./routes
+
+app.use("/", checkAuth, staticRoute); //check for login user then goes to static routess
+app.use("/user", userRoute); // public access for user routes like log in
+app.use("/api/products", restrictToLoggedinUserOnly, productsRoutes); // restricted to loggedin users only
 
 //  Start the server
 
